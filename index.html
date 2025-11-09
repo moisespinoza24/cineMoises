@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cinema The MasterS</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0c0c0c;
+      color: yellow;
+    }
+    p {
+      color: white;
+    }
+
+    .card-title {
+      color: white;
+    }
+
+    .navbar {
+      background-color: #141414;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      filter: brightness(70%);
+    }
+
+    @media (max-width: 576px) {
+      .carousel-item img {
+        height: 250px;
+        object-fit: contain;
+        background-color: black;
+      }
+    }
+
+    .movie-card {
+      background-color: #1a1a1a;
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      height: 100%;
+    }
+
+    .movie-card img {
+      width: 100%;
+      height: 330px;
+      object-fit: cover;
+    }
+
+    .movie-card:hover {
+      transform: scale(1.03);
+    }
+
+    .btn-ticket {
+      background-color: #e50914;
+      border: none;
+    }
+
+    .btn-ticket:hover {
+      background-color: #b0060f;
+    }
+
+    footer {
+      background-color: #111;
+      color: #bbb;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .filter-btn.active {
+      background-color: #e50914;
+      color: white;
+    }
+
+    .filter-btn {
+      border: 1px solid #e50914;
+      color: #e50914;
+      background-color: transparent;
+      margin: 5px;
+    }
+
+    .filter-btn:hover {
+      background-color: #e50914;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-danger" href="#">🎬 Cinema The MasterS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cartelera">Cartelera</a></li>
+          <li class="nav-item"><a class="nav-link" href="#catalogo">Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CARRUSEL -->
+  <section id="inicio">
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="ProyectoX.jpg" class="d-block w-100" alt="Película 1">
+          <div class="carousel-caption d-none d-md-block">
+            <h2 class="fw-bold">La Aventura Comienza</h2>
+            <p>Disfrutá de las mejores películas del año solo en Cinema The MasterS.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="Planeta de los simios.jpg" class="d-block w-100" alt="Película 2">
+        </div>
+        <div class="carousel-item">
+          <img src="jurassic Word.jpg" class="d-block w-100" alt="Película 3">
+        </div>
+        <div class="carousel-item">
+          <img src="Un lugar en silencio.jpg" class="d-block w-100" alt="Película 4">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- CARTELERA -->
+  <section id="cartelera" class="container mt-5">
+    <h2 class="text-center mb-4 text-danger fw-bold">🎥 Cartelera</h2>
+    <div class="row g-4">
+      <div class="col-md-4 d-flex">
+        <div class="card text-light movie-card w-100">
+          <img src="50 sombras.jpg" alt="Pelicula 1">
+          <div class="card-body">
+            <h5 class="card-title">50 Sombras de Grey</h5>
+            <p class="card-text">50 sombras de Grey es una película romántica y erótica que muestra la intensa y complicada relación entre Anastasia Steele y el misterioso empresario Christian Grey.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card text-light movie-card w-100">
+          <img src="Mi_Mascota_es_un_Monstruo.jpg" alt="Pelicula 2">
+          <div class="card-body">
+            <h5 class="card-title">Mi Mascota es un Mostruo</h5>
+            <p class="card-text">Mi mascota es un monstruo es una película familiar que cuenta la historia de un niño que descubre y protege a una misteriosa criatura marina con la que forma una gran amistad.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card text-light movie-card w-100">
+          <img src="Jeyson.jpg" alt="Pelicula 3">
+          <div class="card-body">
+            <h5 class="card-title">Jeyson</h5>
+            <p class="card-text">La película de Jason muestra el terror y la venganza de un asesino implacable que acecha a sus víctimas en Camp Crystal Lake.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section id="catalogo" class="container mt-5">
+    <h2 class="text-center text-danger fw-bold mb-4">🎞️ Catálogo de Películas</h2>
+
+    <!-- BOTONES DE FILTRO -->
+    <div class="text-center mb-4">
+      <button class="btn filter-btn active" data-category="all">Todas</button>
+      <button class="btn filter-btn" data-category="infantiles">Infantiles</button>
+      <button class="btn filter-btn" data-category="accion">Acción</button>
+      <button class="btn filter-btn" data-category="fantasia">Fantasía</button>
+      <button class="btn filter-btn" data-category="terror">Terror</button>
+    </div>
+
+    <!-- CONTENEDOR DE PELÍCULAS -->
+    <div class="row g-4">
+      <!-- INFANTILES -->
+      <div class="col-md-3 movie-card-container" data-category="infantiles">
+        <div class="card movie-card">
+          <img src="Caroline y la puerta secreta.jpg" alt="Caroline y la puerta secreta">
+          <div class="card-body">
+            <h5 class="card-title">Caroline y la puerta secreta</h5>
+            <p>Una niña curiosa descubre un mundo paralelo que parece perfecto, pero esconde oscuros secretos.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="infantiles">
+        <div class="card movie-card">
+          <img src="el-libro-de-la-selva.jpg" alt="El libro de la selva">
+          <div class="card-body">
+            <h5 class="card-title">El libro de la selva</h5>
+            <p>Un niño criado por animales en la selva aprende sobre la amistad, el valor y su identidad.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="infantiles">
+        <div class="card movie-card">
+          <img src="tarzan-1999.jpg" alt="Tarzan">
+          <div class="card-body">
+            <h5 class="card-title">Tarzan</h5>
+            <p>Un hombre criado por gorilas descubre sus orígenes humanos y protege su hogar.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="infantiles">
+        <div class="card movie-card">
+          <img src="El cadáver de la novia.jpg" alt="El cadáver de la novia">
+          <div class="card-body">
+            <h5 class="card-title">El cadáver de la novia</h5>
+            <p>Un hombre accidentalmente se casa con una novia muerta y queda entre el amor y el más allá.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ACCIÓN -->
+      <div class="col-md-3 movie-card-container" data-category="accion">
+        <div class="card movie-card">
+          <img src="John Wick.jpg" alt="John Wick">
+          <div class="card-body">
+            <h5 class="card-title">John Wick</h5>
+            <p>Un asesino legendario busca venganza en un mundo implacable.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="accion">
+        <div class="card movie-card">
+          <img src="Jumanji.jpg" alt="Jumanji">
+          <div class="card-body">
+            <h5 class="card-title">Jumanji</h5>
+            <p>Un grupo queda atrapado en un misterioso juego lleno de aventuras y peligros.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FANTASÍA -->
+      <div class="col-md-3 movie-card-container" data-category="fantasia">
+        <div class="card movie-card">
+          <img src="Malefica.jpg" alt="Malefica">
+          <div class="card-body">
+            <h5 class="card-title">Malefica</h5>
+            <p>Maléfica trata sobre un hada traicionada que busca venganza, pero al final descubre el poder del amor y el perdón.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 movie-card-container" data-category="fantasia">
+        <div class="card movie-card">
+          <img src="Oz.jpg" alt="Oz">
+          <div class="card-body">
+            <h5 class="card-title">Oz</h5>
+            <p>Oz trata sobre un mago que llega a una tierra mágica y debe convertirse en un verdadero héroe para salvarla del poder de las brujas malvadas.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="fantasia">
+        <div class="card movie-card">
+          <img src="corazon_de_tinta_opt.jpg" alt="Corazon de tinta">
+          <div class="card-body">
+            <h5 class="card-title">Corazon de tinta</h5>
+            <p>Corazón de tinta trata sobre un hombre que puede hacer realidad los personajes de los libros al leerlos en voz alta, lo que desata una peligrosa aventura llena de fantasía.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- TERROR -->
+      <div class="col-md-3 movie-card-container" data-category="terror">
+        <div class="card movie-card">
+          <img src="Jeepers Creepers.jpg" alt="Jeepers Creepers">
+          <div class="card-body">
+            <h5 class="card-title">Jeepers Creepers</h5>
+            <p>Un monstruo despierta cada 23 años para cazar y alimentarse de los humanos.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="terror">
+        <div class="card movie-card">
+          <img src="Camino hacia el terror.jpg" alt="Wrong Turns">
+          <div class="card-body">
+            <h5 class="card-title">Wrong Turns</h5>
+            <p>Un grupo perdido en el bosque es cazado por asesinos deformes.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3 movie-card-container" data-category="terror">
+        <div class="card movie-card">
+          <img src="Smaile.jpg" alt="Smaile">
+          <div class="card-body">
+            <h5 class="card-title">Smaile</h5>
+            <p>Una entidad maligna se manifiesta a través de sonrisas inquietantes.</p>
+            <a href="compra.html" class="btn btn-ticket text-white w-100">Comprar Entrada</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HORARIOS --><section id="horarios" class="container mt-5">
+  <h2 class="text-center mb-4 text-danger fw-bold">🕒 Horarios</h2>
+  <table class="table table-dark table-striped text-center">
+    <thead>
+      <tr>
+        <th>Película</th>
+        <th>Sala</th>
+        <th>Horario</th>
+      </tr>
+    </thead>
+    <tbody id="tablaHorarios">
+      <!-- Los datos se llenan con JavaScript -->
+    </tbody>
+  </table>
+</section>
+
+<script>
+  // Lista de películas del catálogo con salas y horarios
+  const peliculasCatalogo = [
+    { titulo: "Tarzan", sala: 1, horario: "2:00 PM | 5:00 PM | 7:00 PM" },
+    { titulo: "Jurassic World", sala: 2, horario: "2:30 PM | 6:30 PM | 8:30 PM" },
+    { titulo: "Mi Mascota es un Monstruo", sala: 3, horario: "9:00 AM | 5:00 PM | 9:00 PM" },
+    { titulo: "Caroline y la puerta secreta", sala: 4, horario: "10:00 AM | 1:00 PM | 4:00 PM" },
+    { titulo: "Maléfica", sala: 5, horario: "12:00 PM | 3:30 PM | 6:30 PM" },
+    { titulo: "Jumanji", sala: 6, horario: "1:00 PM | 4:00 PM | 7:00 PM" },
+    { titulo: "Jeepers Creepers", sala: 7, horario: "8:00 PM | 10:00 PM | 12:00 AM" },
+    { titulo: "Corazón de Tinta", sala: 8, horario: "11:00 AM | 2:00 PM | 5:00 PM" },
+    { titulo: "El cadáver de la novia", sala: 9, horario: "3:00 PM | 6:00 PM | 8:00 PM" },
+    { titulo: "Oz", sala: 10, horario: "9:30 AM | 12:30 PM | 3:30 PM" }
+  ];
+
+  const tablaHorarios = document.getElementById("tablaHorarios");
+  let indice = 0;
+
+  // Función para actualizar la tabla con nuevas películas
+  function actualizarHorarios() {
+    tablaHorarios.innerHTML = ""; // Limpia la tabla
+    // Muestra 3 películas diferentes por cada ciclo
+    for (let i = 0; i < 3; i++) {
+      const pelicula = peliculasCatalogo[(indice + i) % peliculasCatalogo.length];
+      const fila = `
+        <tr>
+          <td>${pelicula.titulo}</td>
+          <td>${pelicula.sala}</td>
+          <td>${pelicula.horario}</td>
+        </tr>
+      `;
+      tablaHorarios.innerHTML += fila;
+    }
+    indice = (indice + 3) % peliculasCatalogo.length; // Avanza el índice
+  }
+
+  // Actualiza al cargar la página
+  actualizarHorarios();
+
+  // Cada 10 minutos cambia los horarios (600000 ms)
+  setInterval(actualizarHorarios, 600000);
+
+  // 💡 Si quieres probarlo rápido, cambia 600000 por 10000 (10 segundos)
+</script>
+  
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 text-danger fw-bold">📞 Contáctanos</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="bg-dark p-4 rounded">
+          <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control" placeholder="Tu nombre completo" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control" placeholder="correo@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Mensaje</label>
+            <textarea class="form-control" rows="4" placeholder="Escribí tu mensaje..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-ticket text-white w-100">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Cinema The MasterS. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- FILTRO DE CATÁLOGO -->
+  <script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const movies = document.querySelectorAll('.movie-card-container');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        movies.forEach(movie => {
+          if (category === 'all' || movie.getAttribute('data-category') === category) {
+            movie.style.display = 'block';
+          } else {
+            movie.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+
+</body
